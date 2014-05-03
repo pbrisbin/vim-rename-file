@@ -4,7 +4,7 @@ endif
 
 let g:rename_file_loaded = 1
 
-function! s:RenameFile()
+function s:RenameFile()
   let old_name = expand('%')
   let new_name = input('New file name: ', old_name, 'file')
 
@@ -14,4 +14,4 @@ function! s:RenameFile()
   endif
 endfunction
 
-command! RenameFile call s:RenameFile()
+command RenameFile call s:RenameFile()
